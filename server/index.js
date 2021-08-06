@@ -83,6 +83,7 @@ app.post('/api/addcomment/:post_id', cc.addComment)
 app.delete('/api/deletecomment/:comment_id', cc.deleteComment)
 app.put('/api/editcomment/:comment_id', cc.editComment)
 
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 //AWS
 app.get('/api/signs3', (req, res) => {
     aws.config = {
